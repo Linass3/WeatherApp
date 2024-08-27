@@ -18,12 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(windowScene: windowScene)
 
-        let viewModel: WeatherSearchViewModel = DefaultWeatherSearchViewModel()
+        let weatherDataClient: WeatherDataClient = DefaultWeatherDataClient()
+        let viewModel: WeatherSearchViewModel = DefaultWeatherSearchViewModel(weatherDataClient: weatherDataClient)
         let rootViewController = WeatherSearchViewController(viewModel: viewModel)
 
         window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         window?.frame = UIScreen.main.bounds
-    
+
         window?.makeKeyAndVisible()
     }
 

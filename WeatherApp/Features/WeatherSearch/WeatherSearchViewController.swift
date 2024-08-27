@@ -1,3 +1,4 @@
+import Combine
 import UIKit
 
 class WeatherSearchViewController: UIViewController {
@@ -27,6 +28,7 @@ class WeatherSearchViewController: UIViewController {
     // MARK: - Properties
 
     private var viewModel: WeatherSearchViewModel
+    private var subscriptions = Set<AnyCancellable>()
 
     init(viewModel: WeatherSearchViewModel) {
         self.viewModel = viewModel
@@ -47,6 +49,7 @@ class WeatherSearchViewController: UIViewController {
         view.backgroundColor = .white
 
         setupUI()
+        setupBindings()
     }
 
     // MARK: - Private
@@ -109,6 +112,18 @@ class WeatherSearchViewController: UIViewController {
         ])
     }
 
+    private func setupBindings() {
+        viewModel.weatherData
+            .receive(on: RunLoop.main)
+            .sink { [weak self] weatherData in
+                guard let self else { return }
+
+                let weatherDetailsViewController = WeatherDetailsViewController(weatherData: weatherData)
+                navigationController?.pushViewController(weatherDetailsViewController, animated: true)
+            }
+            .store(in: &subscriptions)
+    }
+
     private func makeImageView() -> UIImageView {
         let image = UIImage(named: "Image1")
         let imageView = UIImageView(image: image)
@@ -157,8 +172,6 @@ class WeatherSearchViewController: UIViewController {
 
     @objc private func onSearchButtonTap() {
         viewModel.onSearchButtonDidSelect()
-        let weatherDetailsViewController = WeatherDetailsViewController()
-        navigationController?.pushViewController(weatherDetailsViewController, animated: true)
     }
 
     @objc private func onHistoryButtonTap() {

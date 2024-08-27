@@ -1,19 +1,19 @@
 import UIKit
 
 class WeatherCard: UIView {
+    // MARK: - UI views
+
     private lazy var horizontalStackView: UIStackView = makeHorizontalStackView()
-    private lazy var iconView: UIImageView = makeImageView()
+    private lazy var iconView: UIImageView = makeImageView(systemIconName: weatherData.weather.first?.icon ?? "star")
     private lazy var weatherConditionLabel: UILabel = makeLabel()
-    private lazy var temperatureLabel: UILabel = makeLabel(
-        font: UIFont.boldSystemFont(ofSize: 56)
-    )
+    private lazy var temperatureLabel: UILabel = makeLabel(font: UIFont.boldSystemFont(ofSize: 56))
     private lazy var cityLabel: UILabel = makeLabel()
     private lazy var dateLabel: UILabel = makeLabel()
 
-    private let weather: Weather
+    private let weatherData: WeatherData
     
-    init(weather: Weather) {
-        self.weather = weather
+    init(weatherData: WeatherData) {
+        self.weatherData = weatherData
         super.init(frame: .zero)
         
         backgroundColor = .white
@@ -27,10 +27,10 @@ class WeatherCard: UIView {
     }
     
     private func setupUI() {
-        weatherConditionLabel.text = weather.weatherType
-        temperatureLabel.text = weather.temperature
-        cityLabel.text = weather.city
-        dateLabel.text = weather.date
+        weatherConditionLabel.text = weatherData.weather.first?.description
+        temperatureLabel.text = weatherData.main.tempString
+        cityLabel.text = weatherData.city
+        dateLabel.text = weatherData.dateString
     }
     
     private func setupConstraints() {
@@ -83,8 +83,8 @@ class WeatherCard: UIView {
         return stackView
     }
     
-    private func makeImageView() -> UIImageView {
-        let image = UIImage(systemName: "star")
+    private func makeImageView(systemIconName: String) -> UIImageView {
+        let image = UIImage(systemName: systemIconName)
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
         return imageView
