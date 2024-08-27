@@ -9,21 +9,30 @@
 /* Begin PBXBuildFile section */
 		8112FD832C7CEE8700E0B4B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112FD822C7CEE8700E0B4B7 /* AppDelegate.swift */; };
 		8112FD852C7CEE8700E0B4B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112FD842C7CEE8700E0B4B7 /* SceneDelegate.swift */; };
-		8112FD872C7CEE8700E0B4B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112FD862C7CEE8700E0B4B7 /* ViewController.swift */; };
-		8112FD8A2C7CEE8700E0B4B7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8112FD892C7CEE8700E0B4B7 /* Base */; };
 		8112FD8C2C7CEE8900E0B4B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8112FD8B2C7CEE8900E0B4B7 /* Assets.xcassets */; };
 		8112FD8F2C7CEE8900E0B4B7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8112FD8E2C7CEE8900E0B4B7 /* Base */; };
+		8140CA142C7D166300E54334 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CA132C7D166300E54334 /* ApiClient.swift */; };
+		8140CA172C7D16E000E54334 /* WeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CA162C7D16E000E54334 /* WeatherCard.swift */; };
+		8140CA1A2C7D1AEF00E54334 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CA192C7D1AEF00E54334 /* Weather.swift */; };
+		8140CA1C2C7D23F800E54334 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CA1B2C7D23F700E54334 /* WeatherDetailsViewController.swift */; };
+		81DD6D942C7CF3C400520934 /* WeatherSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112FD862C7CEE8700E0B4B7 /* WeatherSearchViewController.swift */; };
+		81DD6D972C7CFA9400520934 /* WeatherSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD6D962C7CFA9400520934 /* WeatherSearchViewModel.swift */; };
+		81DD6D9C2C7D085100520934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8112FD8D2C7CEE8900E0B4B7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8112FD7F2C7CEE8700E0B4B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8112FD822C7CEE8700E0B4B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8112FD842C7CEE8700E0B4B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8112FD862C7CEE8700E0B4B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8112FD892C7CEE8700E0B4B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8112FD862C7CEE8700E0B4B7 /* WeatherSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSearchViewController.swift; sourceTree = "<group>"; };
 		8112FD8B2C7CEE8900E0B4B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8112FD8E2C7CEE8900E0B4B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8112FD902C7CEE8900E0B4B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8140CA132C7D166300E54334 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		8140CA162C7D16E000E54334 /* WeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
+		8140CA192C7D1AEF00E54334 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		8140CA1B2C7D23F700E54334 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
+		81DD6D962C7CFA9400520934 /* WeatherSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +65,67 @@
 		8112FD812C7CEE8700E0B4B7 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				8140CA112C7D163900E54334 /* Utils */,
+				8112FD982C7CF25F00E0B4B7 /* Features */,
 				8112FD822C7CEE8700E0B4B7 /* AppDelegate.swift */,
 				8112FD842C7CEE8700E0B4B7 /* SceneDelegate.swift */,
-				8112FD862C7CEE8700E0B4B7 /* ViewController.swift */,
-				8112FD882C7CEE8700E0B4B7 /* Main.storyboard */,
 				8112FD8B2C7CEE8900E0B4B7 /* Assets.xcassets */,
 				8112FD8D2C7CEE8900E0B4B7 /* LaunchScreen.storyboard */,
 				8112FD902C7CEE8900E0B4B7 /* Info.plist */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		8112FD982C7CF25F00E0B4B7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8140CA152C7D16A200E54334 /* WeatherDetails */,
+				8112FD992C7CF26800E0B4B7 /* WeatherSearch */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8112FD992C7CF26800E0B4B7 /* WeatherSearch */ = {
+			isa = PBXGroup;
+			children = (
+				8112FD862C7CEE8700E0B4B7 /* WeatherSearchViewController.swift */,
+				81DD6D962C7CFA9400520934 /* WeatherSearchViewModel.swift */,
+			);
+			path = WeatherSearch;
+			sourceTree = "<group>";
+		};
+		8140CA112C7D163900E54334 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8140CA182C7D1AC300E54334 /* Entities */,
+				8140CA122C7D164400E54334 /* ApiService */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8140CA122C7D164400E54334 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				8140CA132C7D166300E54334 /* ApiClient.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		8140CA152C7D16A200E54334 /* WeatherDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8140CA162C7D16E000E54334 /* WeatherCard.swift */,
+				8140CA1B2C7D23F700E54334 /* WeatherDetailsViewController.swift */,
+			);
+			path = WeatherDetails;
+			sourceTree = "<group>";
+		};
+		8140CA182C7D1AC300E54334 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8140CA192C7D1AEF00E54334 /* Weather.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DD6D9C2C7D085100520934 /* LaunchScreen.storyboard in Resources */,
 				8112FD8C2C7CEE8900E0B4B7 /* Assets.xcassets in Resources */,
 				8112FD8F2C7CEE8900E0B4B7 /* Base in Resources */,
-				8112FD8A2C7CEE8700E0B4B7 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +199,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8112FD872C7CEE8700E0B4B7 /* ViewController.swift in Sources */,
+				81DD6D942C7CF3C400520934 /* WeatherSearchViewController.swift in Sources */,
+				81DD6D972C7CFA9400520934 /* WeatherSearchViewModel.swift in Sources */,
+				8140CA1C2C7D23F800E54334 /* WeatherDetailsViewController.swift in Sources */,
 				8112FD832C7CEE8700E0B4B7 /* AppDelegate.swift in Sources */,
 				8112FD852C7CEE8700E0B4B7 /* SceneDelegate.swift in Sources */,
+				8140CA172C7D16E000E54334 /* WeatherCard.swift in Sources */,
+				8140CA142C7D166300E54334 /* ApiClient.swift in Sources */,
+				8140CA1A2C7D1AEF00E54334 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8112FD882C7CEE8700E0B4B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8112FD892C7CEE8700E0B4B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8112FD8D2C7CEE8900E0B4B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,15 +348,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,15 +376,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
