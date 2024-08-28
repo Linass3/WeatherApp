@@ -19,7 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         let weatherDataClient: WeatherDataClient = DefaultWeatherDataClient()
-        let viewModel: WeatherSearchViewModel = DefaultWeatherSearchViewModel(weatherDataClient: weatherDataClient)
+        let weatherHistoryService: WeatherHistoryService = DefaultWeatherHistoryService()
+        let viewModel: WeatherSearchViewModel = DefaultWeatherSearchViewModel(
+            weatherDataClient: weatherDataClient,
+            weatherHistoryService: weatherHistoryService
+        )
         let rootViewController = WeatherSearchViewController(viewModel: viewModel)
 
         window?.rootViewController = UINavigationController(rootViewController: rootViewController)

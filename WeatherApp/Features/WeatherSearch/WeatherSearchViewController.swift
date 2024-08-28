@@ -175,7 +175,10 @@ class WeatherSearchViewController: UIViewController {
     }
 
     @objc private func onHistoryButtonTap() {
-        viewModel.onHistoryButtonDidSelect()
+        let weatherHistoryService: WeatherHistoryService = DefaultWeatherHistoryService()
+        let weatherHistoryViewModel = DefaultWeatherHistoryViewModel(weatherHistoryService: weatherHistoryService)
+        let weatherHistoryViewController = WeatherHistoryViewController(weatherHistoryViewModel: weatherHistoryViewModel)
+        navigationController?.pushViewController(weatherHistoryViewController, animated: true)
     }
 
     @objc private func onTextFieldDidChange() {

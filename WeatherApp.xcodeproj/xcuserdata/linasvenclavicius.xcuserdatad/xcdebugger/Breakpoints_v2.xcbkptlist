@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1B2AF224-A7FE-4D47-AE4B-D1C1C972162E"
+            uuid = "27726457-C448-4E1D-A4CB-8C6249CFCF1D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherApp/SceneDelegate.swift"
+            filePath = "WeatherApp/Features/WeatherHistory/WeatherHistoryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "scene(_:willConnectTo:options:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "setupUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -4,7 +4,7 @@ class WeatherCard: UIView {
     // MARK: - UI views
 
     private lazy var horizontalStackView: UIStackView = makeHorizontalStackView()
-    private lazy var iconView: UIImageView = makeImageView(systemIconName: weatherData.weather.first?.icon ?? "star")
+    private lazy var iconView: UIImageView = makeImageView()
     private lazy var weatherConditionLabel: UILabel = makeLabel()
     private lazy var temperatureLabel: UILabel = makeLabel(font: UIFont.boldSystemFont(ofSize: 56))
     private lazy var cityLabel: UILabel = makeLabel()
@@ -16,7 +16,7 @@ class WeatherCard: UIView {
         self.weatherData = weatherData
         super.init(frame: .zero)
         
-        backgroundColor = .white
+        backgroundColor = .lightGray
         setupConstraints()
         setupUI()
     }
@@ -31,6 +31,7 @@ class WeatherCard: UIView {
         temperatureLabel.text = weatherData.main.tempString
         cityLabel.text = weatherData.city
         dateLabel.text = weatherData.dateString
+        iconView.loadImage(from: "https://openweathermap.org/img/wn/\(weatherData.weather.first?.icon ?? "01d")@2x.png")
     }
     
     private func setupConstraints() {
@@ -83,10 +84,8 @@ class WeatherCard: UIView {
         return stackView
     }
     
-    private func makeImageView(systemIconName: String) -> UIImageView {
-        let image = UIImage(systemName: systemIconName)
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFit
+    private func makeImageView() -> UIImageView {
+        let imageView = UIImageView()
         return imageView
     }
     

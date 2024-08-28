@@ -5,7 +5,6 @@ protocol WeatherSearchViewModel {
     var weatherData: AnyPublisher<WeatherData, Never> { get }
     
     func onSearchButtonDidSelect()
-    func onHistoryButtonDidSelect()
     func onSearchTextChange(text: String)
 }
 
@@ -16,11 +15,13 @@ final class DefaultWeatherSearchViewModel: WeatherSearchViewModel {
     }
     
     private let weatherDataClient: WeatherDataClient
+    private let weatherHistoryService: WeatherHistoryService
     
     private var searchCity: String?
     
-    init(weatherDataClient: WeatherDataClient) {
+    init(weatherDataClient: WeatherDataClient, weatherHistoryService: WeatherHistoryService) {
         self.weatherDataClient = weatherDataClient
+        self.weatherHistoryService = weatherHistoryService
     }
     
     // MARK: - WeatherSearchViewModel
@@ -35,16 +36,13 @@ final class DefaultWeatherSearchViewModel: WeatherSearchViewModel {
             switch result {
             case .success(let weatherData):
                 weatherDataSubject.send(weatherData)
+                weatherHistoryService.saveWeatherData(weatherData: weatherData)
             case .failure(let apiError):
                 print("API error: \(apiError)")
             }
         }
     }
-    
-    func onHistoryButtonDidSelect() {
-        print("history")
-    }
-    
+        
     func onSearchTextChange(text: String) {
         searchCity = text
     }

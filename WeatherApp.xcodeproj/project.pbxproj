@@ -11,6 +11,11 @@
 		8112FD852C7CEE8700E0B4B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112FD842C7CEE8700E0B4B7 /* SceneDelegate.swift */; };
 		8112FD8C2C7CEE8900E0B4B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8112FD8B2C7CEE8900E0B4B7 /* Assets.xcassets */; };
 		8112FD8F2C7CEE8900E0B4B7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8112FD8E2C7CEE8900E0B4B7 /* Base */; };
+		8123F5B32C7F508400F15122 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8123F5B22C7F508400F15122 /* Kingfisher */; };
+		8123F5B52C7F526400F15122 /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123F5B42C7F526400F15122 /* UIImageView+ImageLoading.swift */; };
+		8123F5B82C7F5D1600F15122 /* WeatherHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123F5B72C7F5D1600F15122 /* WeatherHistoryViewController.swift */; };
+		8123F5BE2C7FA3CC00F15122 /* WeatherHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123F5BD2C7FA3CC00F15122 /* WeatherHistoryViewModel.swift */; };
+		8123F5C12C7FA90000F15122 /* WeatherHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123F5C02C7FA90000F15122 /* WeatherHistoryService.swift */; };
 		8140CA142C7D166300E54334 /* WeatherDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CA132C7D166300E54334 /* WeatherDataClient.swift */; };
 		8140CA172C7D16E000E54334 /* WeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CA162C7D16E000E54334 /* WeatherCard.swift */; };
 		8140CA1A2C7D1AEF00E54334 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CA192C7D1AEF00E54334 /* WeatherData.swift */; };
@@ -29,6 +34,10 @@
 		8112FD8B2C7CEE8900E0B4B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8112FD8E2C7CEE8900E0B4B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8112FD902C7CEE8900E0B4B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8123F5B42C7F526400F15122 /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
+		8123F5B72C7F5D1600F15122 /* WeatherHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryViewController.swift; sourceTree = "<group>"; };
+		8123F5BD2C7FA3CC00F15122 /* WeatherHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryViewModel.swift; sourceTree = "<group>"; };
+		8123F5C02C7FA90000F15122 /* WeatherHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHistoryService.swift; sourceTree = "<group>"; };
 		8140CA132C7D166300E54334 /* WeatherDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataClient.swift; sourceTree = "<group>"; };
 		8140CA162C7D16E000E54334 /* WeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
 		8140CA192C7D1AEF00E54334 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
@@ -42,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8123F5B32C7F508400F15122 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,7 @@
 		8112FD982C7CF25F00E0B4B7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8123F5B62C7F5CD800F15122 /* WeatherHistory */,
 				8140CA152C7D16A200E54334 /* WeatherDetails */,
 				8112FD992C7CF26800E0B4B7 /* WeatherSearch */,
 			);
@@ -96,11 +107,30 @@
 			path = WeatherSearch;
 			sourceTree = "<group>";
 		};
+		8123F5B62C7F5CD800F15122 /* WeatherHistory */ = {
+			isa = PBXGroup;
+			children = (
+				8123F5B72C7F5D1600F15122 /* WeatherHistoryViewController.swift */,
+				8123F5BD2C7FA3CC00F15122 /* WeatherHistoryViewModel.swift */,
+			);
+			path = WeatherHistory;
+			sourceTree = "<group>";
+		};
+		8123F5BF2C7FA8F000F15122 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8123F5C02C7FA90000F15122 /* WeatherHistoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8140CA112C7D163900E54334 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8123F5BF2C7FA8F000F15122 /* Services */,
 				8140CA182C7D1AC300E54334 /* Entities */,
 				8140CA122C7D164400E54334 /* ApiService */,
+				8123F5B42C7F526400F15122 /* UIImageView+ImageLoading.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -147,6 +177,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				8123F5B22C7F508400F15122 /* Kingfisher */,
+			);
 			productName = WeatherApp;
 			productReference = 8112FD7F2C7CEE8700E0B4B7 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 8112FD762C7CEE8700E0B4B7;
+			packageReferences = (
+				8123F5B12C7F508400F15122 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8112FD802C7CEE8700E0B4B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,12 +240,16 @@
 			files = (
 				81DD6D942C7CF3C400520934 /* WeatherSearchViewController.swift in Sources */,
 				81DD6D972C7CFA9400520934 /* WeatherSearchViewModel.swift in Sources */,
+				8123F5BE2C7FA3CC00F15122 /* WeatherHistoryViewModel.swift in Sources */,
 				8140CA1C2C7D23F800E54334 /* WeatherDetailsViewController.swift in Sources */,
+				8123F5B52C7F526400F15122 /* UIImageView+ImageLoading.swift in Sources */,
 				8112FD832C7CEE8700E0B4B7 /* AppDelegate.swift in Sources */,
 				8112FD852C7CEE8700E0B4B7 /* SceneDelegate.swift in Sources */,
 				8140CA172C7D16E000E54334 /* WeatherCard.swift in Sources */,
+				8123F5B82C7F5D1600F15122 /* WeatherHistoryViewController.swift in Sources */,
 				8140CA142C7D166300E54334 /* WeatherDataClient.swift in Sources */,
 				8140CA1A2C7D1AEF00E54334 /* WeatherData.swift in Sources */,
+				8123F5C12C7FA90000F15122 /* WeatherHistoryService.swift in Sources */,
 				8140CA1F2C7E613600E54334 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8123F5B12C7F508400F15122 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8123F5B22C7F508400F15122 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8123F5B12C7F508400F15122 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8112FD772C7CEE8700E0B4B7 /* Project object */;
 }
