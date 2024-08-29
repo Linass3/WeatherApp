@@ -127,10 +127,10 @@
 		8140CA112C7D163900E54334 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8147D2002C80FEB4004512BF /* Extensions */,
 				8123F5BF2C7FA8F000F15122 /* Services */,
 				8140CA182C7D1AC300E54334 /* Entities */,
 				8140CA122C7D164400E54334 /* ApiService */,
-				8123F5B42C7F526400F15122 /* UIImageView+ImageLoading.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -159,6 +159,14 @@
 				8140CA192C7D1AEF00E54334 /* WeatherData.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		8147D2002C80FEB4004512BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8123F5B42C7F526400F15122 /* UIImageView+ImageLoading.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
