@@ -25,10 +25,10 @@ final class DefaultWeatherDataClient: WeatherDataClient {
             return
         }
 
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
 
         let task = session.dataTask(with: request) { data, response, error in
-            if let error {
+            if error != nil {
                 completion(.failure(.invalidStatusCode))
                 return
             }

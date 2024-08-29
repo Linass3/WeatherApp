@@ -65,9 +65,6 @@ class WeatherHistoryViewController: UIViewController {
             weatherCardView.translatesAutoresizingMaskIntoConstraints = false
             scrollView.addSubview(weatherCardView)
             NSLayoutConstraint.activate([
-                //                weatherCard.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-//                weatherCard.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-//                weatherCard.heightAnchor.constraint(equalToConstant: weatherCardHeight)
 
                 weatherCardView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
                 weatherCardView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
