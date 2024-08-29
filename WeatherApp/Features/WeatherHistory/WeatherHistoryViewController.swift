@@ -20,7 +20,7 @@ class WeatherHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray5
         setupNavigationBar()
         setupUI()
     }
@@ -109,7 +109,8 @@ class WeatherHistoryViewController: UIViewController {
     private func makeUIScrollView() -> UIScrollView {
         let scrollView = UIScrollView()
         scrollView.isDirectionalLockEnabled = true
-        scrollView.backgroundColor = .gray
+        scrollView.backgroundColor = .clear
+        scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }
 }

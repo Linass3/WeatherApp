@@ -13,9 +13,9 @@ final class DefaultWeatherHistoryService: WeatherHistoryService {
     func saveWeatherData(weatherData: WeatherData) {
         var cachedWeatherDataList = getWeatherDataList()
 
-        cachedWeatherDataList.append(weatherData)
+        cachedWeatherDataList.insert(weatherData, at: 0)
         if cachedWeatherDataList.count > 5 {
-            cachedWeatherDataList.removeFirst()
+            cachedWeatherDataList.removeLast()
         }
 
         saveWeatherDataList(cachedWeatherDataList)

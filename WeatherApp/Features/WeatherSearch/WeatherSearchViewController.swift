@@ -46,7 +46,7 @@ class WeatherSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray5
 
         setupUI()
         setupBindings()
@@ -125,7 +125,7 @@ class WeatherSearchViewController: UIViewController {
     }
 
     private func makeImageView() -> UIImageView {
-        let image = UIImage(named: "Image1")
+        let image = UIImage(named: "Logo")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
         return imageView

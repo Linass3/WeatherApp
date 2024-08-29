@@ -17,8 +17,8 @@ struct WeatherData: Codable {
 
     var dateString: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d"
-        return dateFormatter.string(from: date)
+        dateFormatter.dateFormat = "MMM\nd"
+        return dateFormatter.string(from: date).uppercased()
     }
 }
 
@@ -26,12 +26,16 @@ struct Weather: Codable {
     let id: Int
     let description: String
     let icon: String
+
+    var capitalizedDescription: String {
+        return description.prefix(1).uppercased() + description.dropFirst()
+    }
 }
 
 struct Main: Codable {
     let temp: Double
 
     var tempString: String {
-        return "\(temp)°"
+        return "\(String(format: "%.0f", temp))°"
     }
 }

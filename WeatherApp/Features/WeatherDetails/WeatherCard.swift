@@ -6,9 +6,9 @@ class WeatherCard: UIView {
     private lazy var horizontalStackView: UIStackView = makeHorizontalStackView()
     private lazy var iconView: UIImageView = makeImageView()
     private lazy var weatherConditionLabel: UILabel = makeLabel()
-    private lazy var temperatureLabel: UILabel = makeLabel(font: UIFont.boldSystemFont(ofSize: 56))
+    private lazy var temperatureLabel: UILabel = makeLabel(font: UIFont.boldSystemFont(ofSize: 80))
     private lazy var cityLabel: UILabel = makeLabel()
-    private lazy var dateLabel: UILabel = makeLabel()
+    private lazy var dateLabel: UILabel = makeLabel(alignment: .center)
 
     private let weatherData: WeatherData
     
@@ -27,7 +27,7 @@ class WeatherCard: UIView {
     }
     
     private func setupUI() {
-        weatherConditionLabel.text = weatherData.weather.first?.description
+        weatherConditionLabel.text = weatherData.weather.first?.capitalizedDescription
         temperatureLabel.text = weatherData.main.tempString
         cityLabel.text = weatherData.city
         dateLabel.text = weatherData.dateString
@@ -89,9 +89,14 @@ class WeatherCard: UIView {
         return imageView
     }
     
-    private func makeLabel(font: UIFont = UIFont.systemFont(ofSize: 16)) -> UILabel {
+    private func makeLabel(
+        font: UIFont = UIFont.systemFont(ofSize: 18),
+        alignment: NSTextAlignment = NSTextAlignment.left
+    ) -> UILabel {
         let label = UILabel()
         label.font = font
+        label.textAlignment = alignment
+        label.numberOfLines = 0
         return label
     }
 }
